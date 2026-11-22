@@ -1,0 +1,17 @@
+# Configuration personnelle (adresse du calendrier, lieu...)
+config.py
+
+# Caches et etat d'execution
+edt.ics
+edt.ics.tmp
+meteo.json
+meteo.json.tmp
+page.txt
+derniere.png
+dernier_complet.txt
+*.log
+
+# Python
+__pycache__/
+*.pyc
+.venv/

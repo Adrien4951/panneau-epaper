@@ -1,0 +1,7 @@
+# A ajouter avec « crontab -e » (adapter /home/pi/epaper a votre dossier)
+
+# Une page par minute ; flock evite deux lancements simultanes
+* * * * * cd /home/pi/epaper && flock -n /tmp/ecran.lock /usr/bin/python3 ecran.py >> ecran.log 2>&1
+
+# Telecharger l'emploi du temps 4 fois par jour
+0 0,6,12,18 * * * cd /home/pi/epaper && /usr/bin/python3 edt.py --telecharger >> edt.log 2>&1
